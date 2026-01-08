@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>我的作品集 - 博客</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+     /* 全局样式复用 */
+     * { margin: 0; padding: 0; box-sizing: border-box; font-family: "微软雅黑"; }
+     a { text-decoration: none; color: inherit; }
+     header { background: #fff; padding: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 999; }
+     .nav-wrap { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+     .logo { font-size: 20px; font-weight: bold; color: #e62e38; }
+     .desktop-nav ul { display: flex; gap: 25px; font-size: 14px; }
+     .desktop-nav a { padding: 5px 0; border-bottom: 2px solid transparent; }
+     .desktop-nav a:hover, .desktop-nav a.active { color: #e62e38; border-bottom: 2px solid #e62e38; }
+     /* 作品集页面样式 */
+     .portfolio-page { width: 90%; max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+     .page-title { text-align: center; margin-bottom: 40px; }
+     .page-title h2 { font-size: 28px; margin-bottom: 10px; color: #333; }
+     .page-title p { color: #666; font-size: 16px; }
+     /* 项目筛选区 */
+     .portfolio-filter { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px; }
+     .filter-tag { padding: 8px 16px; border-radius: 20px; cursor: pointer; transition: all 0.3s; }
+     .filter-tag.active { background: #e62e38; color: #fff; }
+     .filter-tag:not(.active):hover { background: #f5f5f5; }
+     /* 项目卡片网格 */
+     .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-bottom: 50px; }
+     .project-card { background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+     .project-card:hover { transform: translateY(-5px); }
+     .project-img { width: 100%; height: 200px; object-fit: cover; }
+     .project-info { padding: 20px; }
+     .project-title { font-size: 18px; margin-bottom: 10px; color: #333; }
+     .project-desc { font-size: 14px; color: #666; line-height: 1.5; margin-bottom: 15px; }
+     .project-tech { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+     .tech-tag { padding: 4px 8px; background: #f5f5f5; border-radius: 4px; font-size: 12px; color: #555; }
+     .project-links { display: flex; gap: 10px; }
+     .project-link { padding: 6px 12px; border-radius: 4px; font-size: 14px; display: flex; align-items: center; gap: 5px; }
+     .link-demo { background: #e62e38; color: #fff; }
+     .link-code { background: #333; color: #fff; }
+     /* 页脚 */
+     footer { background: #333; color: #fff; padding: 30px 0; text-align: center; margin-top: 50px; }
+     .footer-copyright { font-size: 12px; color: #ccc; }
+     /* 响应式适配 */
+     @media (max-width: 768px) {
+       .portfolio-grid { grid-template-columns: 1fr; }
+     }
+   </style>
+ </head>
+ <body>
+   <!-- 导航栏（全局共用） -->
+   <header>
+     <div class="nav-wrap">
+       <div class="logo">我的博客</div>
+       <nav class="desktop-nav">
+         <ul>
+           <li><a href="index.html">首页</a ></li>
+           <li><a href="index.html">文章列表</a ></li>
+           <li><a href="about.html">关于我</a ></li>
+           <li><a href="portfolio.html" class="active">作品集</a ></li>
+         </ul>
+       </nav>
+     </div>
+   </header>
+   <!-- 作品集页面内容 -->
+   <div class="portfolio-page">
+     <!-- 页面标题 -->
+     <div class="page-title">
+       <h2>我的项目作品集</h2>
+       <p>记录学习与实践中的成果，持续更新中...</p >
+     </div>
+     <!-- 项目筛选区 -->
+     <div class="portfolio-filter">
+       <div class="filter-tag active" data-filter="all">全部项目</div>
+       <div class="filter-tag" data-filter="web">Web应用</div>
+       <div class="filter-tag" data-filter="mobile">移动端</div>
+       <div class="filter-tag" data-filter="course">课程设计</div>
+     </div>
+     <!-- 项目卡片网格 -->
+     <div class="portfolio-grid">
+       <!-- 项目1：Web应用 -->
+       <div class="project-card" data-category="web">
+         <img src="tp综艺推荐.webp" alt="综艺推荐网站" class="project-img">
+         <div class="project-info">
+           <h3 class="project-title">综艺推荐网站</h3>
+           <p class="project-desc">基于HTML/CSS/JS开发的综艺推荐平台，支持按类型筛选、评分排序和收藏功能。</p >
+           <div class="project-tech">
+             <span class="tech-tag">HTML5</span>
+             <span class="tech-tag">CSS3</span>
+             <span class="tech-tag">JavaScript</span>
+           </div>
+           <div class="project-links">
+             <a href="#" class="project-link link-demo"><i class="fas fa-external-link-alt"></i> 在线演示</a >
+             <a href="#" class="project-link link-code"><i class="fab fa-github"></i> 源码</a >
+           </div>
+         </div>
+       </div>
+       <!-- 项目2：移动端 -->
+       <div class="project-card" data-category="mobile">
+         <img src="lvxing,旅行.jpg" alt="旅行日记APP" class="project-img">
+         <div class="project-info">
+           <h3 class="project-title">旅行日记APP</h3>
+           <p class="project-desc">React Native开发的移动端应用，可记录旅行地点、上传照片和生成旅行路线图。</p >
+           <div class="project-tech">
+             <span class="tech-tag">React Native</span>
+             <span class="tech-tag">Redux</span>
+             <span class="tech-tag">Node.js</span>
+           </div>
+           <div class="project-links">
+             <a href="#" class="project-link link-demo"><i class="fas fa-external-link-alt"></i> 下载体验</a >
+             <a href="#" class="project-link link-code"><i class="fab fa-github"></i> 源码</a >
+           </div>
+         </div>
+       </div>
+       <!-- 项目3：课程设计 -->
+       <div class="project-card" data-category="course">
+         <img src="geren。微博.png" alt="个人博客系统" class="project-img">
+         <div class="project-info">
+           <h3 class="project-title">个人博客系统</h3>
+           <p class="project-desc">课程设计作品，基于Vue+Express开发的全栈博客系统，支持文章发布、评论和后台管理。</p >
+           <div class="project-tech">
+             <span class="tech-tag">Vue 3</span>
+             <span class="tech-tag">Express</span>
+             <span class="tech-tag">MongoDB</span>
+           </div>
+           <div class="project-links">
+             <a href="#" class="project-link link-demo"><i class="fas fa-external-link-alt"></i> 在线演示</a >
+             <a href="#" class="project-link link-code"><i class="fab fa-github"></i> 源码</a >
+           </div>
+         </div>
+       </div>
+       <!-- 项目4：Web应用 -->
+       <div class="project-card" data-category="web">
+         <img src="yongyeu.音乐.png" alt="音乐播放器" class="project-img">
+         <div class="project-info">
+           <h3 class="project-title">在线音乐播放器</h3>
+           <p class="project-desc">仿网易云音乐的Web播放器，支持歌词同步、播放列表管理和主题切换。</p >
+           <div class="project-tech">
+             <span class="tech-tag">Vue 3</span>
+             <span class="tech-tag">TypeScript</span>
+             <span class="tech-tag">Tailwind CSS</span>
+           </div>
+           <div class="project-links">
+             <a href="#" class="project-link link-demo"><i class="fas fa-external-link-alt"></i> 在线演示</a >
+             <a href="#" class="project-link link-code"><i class="fab fa-github"></i> 源码</a >
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   <!-- 页脚（全局共用） -->
+   <footer>
+     <p class="footer-copyright">© 2026 </p >
+   </footer>
+   <!-- 筛选功能脚本 -->
+   <script>
+     // 项目筛选逻辑
+     const filterTags = document.querySelectorAll('.filter-tag');
+     const projectCards = document.querySelectorAll('.project-card');
+     filterTags.forEach(tag => {
+       tag.addEventListener('click', () => {
+         // 更新筛选标签的激活状态
+         filterTags.forEach(t => t.classList.remove('active'));
+         tag.classList.add('active');
+         const filter = tag.getAttribute('data-filter');
+         
+         // 显示符合筛选条件的项目
+         projectCards.forEach(card => {
+           if (filter === 'all' || card.getAttribute('data-category') === filter) {
+             card.style.display = 'block';
+           } else {
+             card.style.display = 'none';
+           }
+         });
+       });
+     });
+   </script>
+ </body>
+ </html>

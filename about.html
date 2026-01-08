@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我 - 我的博客</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "微软雅黑"; }
+    header { background: #fff; padding: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 999; }
+    .nav-wrap { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: bold; color: #e62e38; }
+    .desktop-nav ul { display: flex; gap: 25px; font-size: 14px; }
+    .desktop-nav a { text-decoration: none; color: #333; padding: 5px 0; border-bottom: 2px solid transparent; }
+    .desktop-nav a:hover { color: #e62e38; border-bottom: 2px solid #e62e38; }
+    .about-page { width: 90%; max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+    .about-header { text-align: center; margin-bottom: 50px; }
+    .about-avatar { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; }
+    .about-name { font-size: 28px; margin-bottom: 10px; }
+    .about-motto { color: #666; font-size: 16px; }
+    .about-intro { display: flex; gap: 30px; margin-bottom: 50px; flex-wrap: wrap; }
+    .about-intro-img { flex: 1; min-width: 300px; }
+    .about-intro-img img { width: 100%; border-radius: 8px; }
+    .about-intro-text { flex: 2; min-width: 300px; line-height: 2; color: #333; }
+    .about-intro-text h2 { font-size: 22px; margin-bottom: 20px; color: #222; }
+    .skills-section { margin-bottom: 50px; }
+    .skills-section h2 { font-size: 22px; margin-bottom: 20px; color: #222; }
+    .skill-item { margin-bottom: 15px; }
+    .skill-name { display: flex; justify-content: space-between; margin-bottom: 5px; }
+    .skill-bar { height: 8px; background: #eee; border-radius: 4px; }
+    .skill-progress { height: 100%; background: #e62e38; border-radius: 4px; }
+    .timeline-section { margin-bottom: 50px; }
+    .timeline-section h2 { font-size: 22px; margin-bottom: 20px; color: #222; }
+    .timeline { position: relative; }
+    .timeline::before { content: ''; position: absolute; top: 0; left: 0; width: 2px; height: 100%; background: #e62e38; }
+    .timeline-item { position: relative; padding-left: 30px; margin-bottom: 30px; }
+    .timeline-item::before { content: ''; position: absolute; top: 5px; left: -9px; width: 20px; height: 20px; border-radius: 50%; background: #e62e38; }
+    .timeline-date { font-weight: bold; color: #e62e38; margin-bottom: 5px; }
+    .timeline-content { color: #333; }
+    .contact-section { text-align: center; margin-bottom: 50px; }
+    .contact-section h2 { font-size: 22px; margin-bottom: 20px; color: #222; }
+    .contact-list { display: flex; justify-content: center; gap: 20px; font-size: 18px; }
+    .contact-item { display: flex; align-items: center; gap: 8px; }
+    footer { background: #333; color: #fff; padding: 30px 0; text-align: center; margin-top: 50px; }
+    .footer-copyright { font-size: 12px; color: #ccc; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-wrap">
+      <div class="logo">我的博客</div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="index.html">文章列表</a></li>
+          <li><a href="about.html">关于我</a></li>
+          <li><a href="portfolio.html">作品集</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="about-page">
+    <div class="about-header">
+      <img src="sb头像.jpg" alt="我的头像" class="about-avatar">
+      <h2 class="about-name">综艺爱好者</h2>
+      <p class="about-motto">代跑全世界 · 时光造英雄</p>
+    </div>
+    <div class="about-intro">
+      <div class="about-intro-img">
+        <img src="sh个人.webp" alt="个人生活照">
+      </div>
+      <div class="about-intro-text">
+        <h2>关于我的故事</h2>
+        <p>我是一名综艺爱好者，同时也是一名前端开发学习者。毕业于某传媒院校，主修数字媒体专业，在校期间接触了大量综艺制作与新媒体内容创作。</p>
+        <p>毕业后曾在某视频平台担任综艺运营实习生，负责节目宣发与用户互动策划；目前正在学习Web前端开发，希望能将“内容创作”与“技术开发”结合，打造自己的综艺分享博客。</p>
+        <p>我的兴趣爱好很广泛，除了追综艺，还喜欢旅行、摄影，尤其喜欢记录各地的人文风情，这些内容也会不定期分享在博客中~</p>
+      </div>
+    </div>
+    <div class="skills-section">
+       <h2>我的技能</h2>
+       <div class="skill-item">
+         <div class="skill-name">
+           <span>HTML5</span>
+           <span>80%</span>
+         </div>
+         <div class="skill-bar">
+           <div class="skill-progress" style="width: 80%"></div>
+         </div>
+       </div>
+       <div class="skill-item">
+         <div class="skill-name">
+           <span>CSS3（含Flex/Grid）</span>
+           <span>75%</span>
+         </div>
+         <div class="skill-bar">
+           <div class="skill-progress" style="width: 75%"></div>
+         </div>
+       </div>
+       <div class="skill-item">
+         <div class="skill-name">
+           <span>JavaScript</span>
+           <span>60%</span>
+         </div>
+         <div class="skill-bar">
+           <div class="skill-progress" style="width: 60%"></div>
+         </div>
+       </div>
+       <div class="skill-item">
+         <div class="skill-name">
+           <span>综艺内容策划</span>
+           <span>90%</span>
+           </div>
+         <div class="skill-bar">
+           <div class="skill-progress" style="width: 90%"></div>
+         </div>
+       </div>
+     </div>
+     <div class="timeline-section">
+       <h2>我的成长里程碑</h2>
+       <div class="timeline">
+         <div class="timeline-item">
+           <div class="timeline-date">2022.09</div>
+           <div class="timeline-content">进入某传媒院校，主修数字媒体专业</div>
+         </div>
+         <div class="timeline-item">
+           <div class="timeline-date">2024.06</div>
+           <div class="timeline-content">在某视频平台实习，担任综艺运营助理</div>
+         </div>
+         <div class="timeline-item">
+           <div class="timeline-date">2025.03</div>
+           <div class="timeline-content">开始学习Web前端开发，掌握HTML/CSS基础</div>
+         </div>
+         <div class="timeline-item">
+           <div class="timeline-date">2026.01</div>
+           <div class="timeline-content">搭建个人博客，分享综艺内容与前端学习笔记</div>
+         </div>
+       </div>
+     </div>
+     <div class="contact-section">
+       <h2>联系我</h2>
+       <div class="contact-list">
+         <div class="contact-item">
+           <i class="fas fa-envelope"></i>
+           <span>3161699827</span>
+         </div>
+         <div class="contact-item">
+           <i class="fab fa-weibo"></i>
+           <span>综艺爱好者</span>
+         </div>
+         <div class="contact-item">
+           <i class="fab fa-wechat"></i>
+           <span>zyahz</span>
+         </div>
+       </div>
+     </div>
+   </div>
+   <footer>
+     <p class="footer-copyright">© 2026</p>
+   </footer>
+ </body>
+ </html>
